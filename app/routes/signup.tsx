@@ -26,17 +26,23 @@ export default function Signup() {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/signup", formData);
-
-      if (response.data.success) {
-        alert("Sign-up successful! Please log in.");
-        navigate("/login");
-      } else {
-        alert("Sign-up failed: " + response.data.error);
+        const response = await axios.post("http://localhost:5000/api/auth/signup", formData);
+        
+        if (response.data?.message == 'User registered successfully') {
+          alert("Sign-up successful! Please log in.");
+          navigate("/login");
+        } else {
+          alert("Sign-up failed: " + (response.data?.error || "Unexpected response"));
+        }
+      } catch (err) {
+        console.error("Signup Error:", err);
+        if (axios.isAxiosError(err) && err.response?.data?.error) {
+          alert("Sign-up failed: " + err.response.data.error);
+        } else {
+          alert("Sign-up failed: Server error");
+        }
       }
-    } catch (err) {
-      alert("Sign-up failed: " + (err as any).response?.data?.error || "Server error");
-    }
+      
   };
 
   return (
