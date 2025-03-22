@@ -27,7 +27,7 @@ export default function Signup() {
 
     try {
         const response = await axios.post("http://localhost:5000/api/auth/signup", formData);
-        
+
         if (response.data?.message == 'User registered successfully') {
           alert("Sign-up successful! Please log in.");
           navigate("/login");
@@ -106,7 +106,7 @@ export default function Signup() {
             </button>
           </form>
           <p className="text-black text-center text-2xl my-10">Or</p>
-          <p className="text-black text-center">Already have an account? Log in</p>
+          <p className="text-black text-center">Already have an account? <a href="/login" className="text-blue-500">Login</a></p>
         </div>
       </div>
     </div>

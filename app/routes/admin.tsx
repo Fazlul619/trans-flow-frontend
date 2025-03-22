@@ -42,8 +42,8 @@ export default function Admin(){
     return <h2 className="text-center text-red-500">Access Denied</h2>;
   }
     return(
-        <div className="bg-[#F3F4F6] max-w-5xl mx-auto p-10">
-        <div className="overflow-x-auto rounded-lg">
+        <div className="bg-[#F3F4F6] w-full h-screen  p-10">
+        <div className="overflow-x-auto rounded-lg max-w-7xl mx-auto">
             <table className="min-w-full bg-white">
                 <thead className="">
                     <tr>
