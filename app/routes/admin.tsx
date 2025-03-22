@@ -34,6 +34,9 @@ export default function Admin(){
 
     fetchContacts();
   }, [navigate]);
+  const handleDownload = async (id: string) => {
+    window.open(`http://localhost:5000/api/contact/download/${id}`, "_blank");
+  };
 
   if (role !== "admin") {
     return <h2 className="text-center text-red-500">Access Denied</h2>;
@@ -61,7 +64,7 @@ export default function Admin(){
                             <td className="p-2  text-black">{contact.message}</td>
                             <td className="p-2  flex justify-center gap-2">
                                 <button className="p-1 bg-green-100 text-green-600 rounded-full"><Eye size={16} /></button>
-                                <button className="p-1 bg-blue-100 text-blue-600 rounded-full"><Download size={16} /></button>
+                                <button onClick={() => handleDownload(contact._id)} className="p-1 bg-blue-100 text-blue-600 rounded-full"><Download size={16} /></button>
                                 <button className="p-1 bg-red-100 text-red-600 rounded-full"><Trash2 size={16} /></button>
                             </td>
                         </tr>
