@@ -66,7 +66,7 @@ export default function Admin() {
   };
 
   const handleDelete = async (id: string) => {
-    console.log("Attempting to delete contact ID:", id); // Debugging
+    console.log("Attempting to delete contact ID:", id); 
 
     if (!window.confirm("Are you sure you want to delete this contact?")) {
         return;
@@ -77,16 +77,16 @@ export default function Admin() {
             headers: { Authorization: localStorage.getItem("token") },
         });
 
-        console.log("✅ Delete response:", res.data);
+      
         alert(res.data.message);
 
-        // ✅ Remove from state immediately
+        
         setContacts(contacts.filter((contact) => contact._id !== id));
     } catch (err) {
         if (axios.isAxiosError(err)) {
-          console.error("❌ Failed to delete contact:", err.response?.data || err.message);
+          console.error(" Failed to delete contact:", err.response?.data || err.message);
         } else {
-          console.error("❌ Failed to delete contact:", err);
+          console.error(" Failed to delete contact:", err);
         }
         if (axios.isAxiosError(err)) {
           alert("Failed to delete contact. " + (err.response?.data?.error || ""));
