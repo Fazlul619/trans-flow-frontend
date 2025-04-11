@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"; 
 import axios from "axios";
-import OAuthLogin from "~/components/OAuthLogin";
+import OAuthLogin from "~/components/OAuthLogin.js";
+
 
 export default function Login() {
   const [formData, setFormData] = useState({ email: "", password: "" });

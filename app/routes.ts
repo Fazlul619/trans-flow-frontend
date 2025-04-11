@@ -7,5 +7,8 @@ export default [
         route("login", "./routes/login.tsx"),
         route("admin", "./routes/admin.tsx"),
         route("oauth-success", "./routes/OAuthSuccess.tsx"),
+        route("submit-transaction", "routes/submit-transaction.tsx"),
+        route("transaction-history", "routes/transaction-history.tsx"),
+        route("admin-transactions", "routes/admin-transactions.tsx"),
     ]),
 ] satisfies RouteConfig;
