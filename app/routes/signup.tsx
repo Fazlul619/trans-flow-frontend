@@ -47,11 +47,11 @@ export default function Signup() {
 
   return (
     <div>
-      <div className="bg-[#C2DAFFF5] max-w-5xl mx-auto rounded-lg flex items-center justify-center gap-10 p-10 my-10">
-        <div>
-          <img src="/images/Asset .png" alt="Welcome" />
+      <div className="bg-[#C2DAFFF5] rounded-lg flex items-center justify-center gap-10 p-10 my-10">
+      <div>
+          <img className="rounded-lg" src="/public/images/login.jpg" alt="Welcome Image" />
           <p className="text-black w-[428px] text-xl text-center mt-5">
-            Welcome back to CyberCraft Bangladesh, where your creativity thrives
+            Welcome to our Transcation App.
           </p>
         </div>
 

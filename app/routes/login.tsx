@@ -24,7 +24,7 @@ export default function Login() {
       window.dispatchEvent(new Event("storage"));
 
       if (res.data.user.role === "admin") {
-        navigate("/admin");
+        navigate("/admin-transactions");
       } else {
         navigate("/");
       }
@@ -35,11 +35,11 @@ export default function Login() {
 
   return (
     <div>
-      <div className="bg-[#C2DAFFF5] max-w-5xl mx-auto rounded-lg flex items-center justify-center gap-10 p-10 my-10">
+      <div className=" bg-[#C2DAFFF5] rounded-lg flex items-center justify-center gap-10 p-10 my-10">
         <div>
-          <img src="/images/Asset .png" alt="Welcome Image" />
+          <img className="rounded-lg" src="/public/images/login.jpg" alt="Welcome Image" />
           <p className="text-black w-[428px] text-xl text-center mt-5">
-            Welcome back to CyberCraft Bangladesh, where your creativity thrives
+            Welcome to our Transcation App.
           </p>
         </div>
         <div className="w-[487px]">

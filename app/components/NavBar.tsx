@@ -37,8 +37,8 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="bg-[#345485] text-white py-3 px-6 flex justify-between items-center">
-        <Link to="/" className="text-xl font-bold">Contact Us App</Link>
+      <nav className="bg-[#345485] text-white py-3 px-6 flex justify-between items-center rounded-tl-2xl rounded-tr-2xl">
+        <Link to="/" className="text-xl font-bold">Transcation App</Link>
 
         <div className="flex items-center gap-4">
           {user ? (
@@ -47,11 +47,11 @@ const NavBar = () => {
                 Welcome, {user.fullName}! <span className="ml-2">(Credit: {user.credit ?? 0})</span>
               </span>
 
-              {/* User nav links */}
+             
               <Link to="/submit-transaction" className="hover:underline">Submit</Link>
               <Link to="/transaction-history" className="hover:underline">History</Link>
 
-              {/* Admin nav link */}
+              
               {user.role === "admin" && (
                 <Link to="/admin-transactions" className="hover:underline">Admin</Link>
               )}
@@ -70,9 +70,9 @@ const NavBar = () => {
         <div className="bg-[#F3F4F6] w-full fixed inset-0 bg-opacity-50 flex justify-center items-center">
           <div className="w-[732px] bg-[#FFFFFF] rounded-lg flex flex-col justify-center gap-3 items-center p-5">
             <div>
-              <img src="/images/Asset .png" alt="Welcome Image" />
-              <p className="text-black w-[428px] text-xl text-center mt-5">
-                Welcome back to CyberCraft Bangladesh, where your creativity thrives
+              <img className="rounded-lg" src="/public/images/login.jpg" alt="Welcome Image" />
+              <p className="text-black text-xl text-center">
+                Welcome to our Transcation App.
               </p>
             </div>
             <button

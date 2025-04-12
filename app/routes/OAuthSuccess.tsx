@@ -15,7 +15,7 @@ const OAuthSuccess = () => {
 
       window.dispatchEvent(new Event("storage"));
 
-      navigate("/admin");
+      navigate("/admin-transactions");
     } else {
       navigate("/login");
     }

@@ -10,10 +10,6 @@ const OAuthLogin = () => {
     }
   };
 
-  const handleFacebookLogin = () => {
-    window.location.href = "http://localhost:5000/api/auth/facebook";
-  };
-
   return (
     <div className="flex flex-col items-center gap-4">
       <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
@@ -22,13 +18,6 @@ const OAuthLogin = () => {
           onError={() => console.error("Google Login Failed")}
         />
       </GoogleOAuthProvider>
-
-      <button
-        onClick={handleFacebookLogin}
-        className="bg-blue-600 text-white px-4 py-2 rounded"
-      >
-        Login with Facebook
-      </button>
     </div>
   );
 };

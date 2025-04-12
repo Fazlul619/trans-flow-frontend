@@ -5,7 +5,6 @@ export default [
         index("./routes/home.tsx"), 
         route("signup", "./routes/signup.tsx"),
         route("login", "./routes/login.tsx"),
-        route("admin", "./routes/admin.tsx"),
         route("oauth-success", "./routes/OAuthSuccess.tsx"),
         route("submit-transaction", "routes/submit-transaction.tsx"),
         route("transaction-history", "routes/transaction-history.tsx"),
