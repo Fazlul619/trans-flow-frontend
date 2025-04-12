@@ -26,7 +26,7 @@ export default function Signup() {
     }
 
     try {
-        const response = await axios.post("https://trans-flow-backend.vercel.app/api/auth/signup", formData);
+        const response = await axios.post("http://localhost:5000/api/auth/signup", formData);
 
         if (response.data?.message == 'User registered successfully') {
           alert("Sign-up successful! Please log in.");
