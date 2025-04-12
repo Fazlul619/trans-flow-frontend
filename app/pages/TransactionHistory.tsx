@@ -14,7 +14,7 @@ export default function TransactionHistory() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/transactions/user/${user.id}`)
+      .get(`https://trans-flow-backend.vercel.app/api/transactions/user/${user.id}`)
       .then((res) => setTransactions(res.data));
   }, []);
 

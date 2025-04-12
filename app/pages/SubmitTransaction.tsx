@@ -12,7 +12,7 @@ export default function SubmitTransaction() {
 
 
     try {
-      await axios.post('http://localhost:5000/api/transactions', {
+      await axios.post('https://trans-flow-backend.vercel.app/api/transactions', {
         userId: user.id,
         amount: Number(amount),
       });

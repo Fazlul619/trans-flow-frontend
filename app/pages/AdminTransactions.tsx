@@ -12,12 +12,12 @@ export default function AdminTransactions() {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/transactions`)
+    axios.get(`https://trans-flow-backend.vercel.app/api/transactions`)
       .then(res => setTransactions(res.data));
   }, []);
 
   const handleUpdate = async (id: string, status: "Approved" | "Rejected") => {
-    await axios.put(`http://localhost:5000/api/transactions/${id}`, { status });
+    await axios.put(`https://trans-flow-backend.vercel.app/api/transactions/${id}`, { status });
     setTransactions(transactions.map(t => t._id === id ? { ...t, status } : t));
   };
 
