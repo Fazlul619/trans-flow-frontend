@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"; 
 import axios from "axios";
-import OAuthLogin from "~/components/OAuthLogin.js";
 
 
 export default function Login() {
@@ -69,9 +68,6 @@ export default function Login() {
             <button type="submit" className="w-full bg-[#345485] text-white mt-4 p-2 rounded-lg hover:bg-blue-800">
               Login
             </button>
-            <div className="mt-4">
-              <OAuthLogin />
-            </div>
           </form>
           <p className="text-black text-center text-2xl my-10">Or</p>
           <p className="text-black text-center">

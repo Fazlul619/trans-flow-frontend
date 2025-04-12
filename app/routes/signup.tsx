@@ -8,7 +8,7 @@ export default function Signup() {
     email: "",
     password: "",
     confirmPassword: "",
-    role: "admin",
+    role: "user",
   });
 
   const navigate = useNavigate();

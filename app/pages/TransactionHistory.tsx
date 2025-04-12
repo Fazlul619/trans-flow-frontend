@@ -14,7 +14,7 @@ export default function TransactionHistory() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/transactions/user/${user._id}`)
+      .get(`http://localhost:5000/api/transactions/user/${user.id}`)
       .then((res) => setTransactions(res.data));
   }, []);
 
@@ -24,8 +24,8 @@ export default function TransactionHistory() {
       <div className="space-y-4">
         {transactions.map((t) => (
           <div key={t._id} className="bg-white shadow rounded p-4 border border-gray-200">
-            <p><strong>Amount:</strong> ${t.amount}</p>
-            <p><strong>Status:</strong> 
+            <p className="text-black"><strong>Amount:</strong> ${t.amount}</p>
+            <p className="text-black"><strong>Status:</strong> 
               <span className={`ml-2 font-bold ${t.status === "Approved" ? "text-green-600" : t.status === "Rejected" ? "text-red-500" : "text-yellow-600"}`}>
                 {t.status}
               </span>

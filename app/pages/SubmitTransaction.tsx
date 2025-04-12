@@ -13,7 +13,7 @@ export default function SubmitTransaction() {
 
     try {
       await axios.post('http://localhost:5000/api/transactions', {
-        userId: user._id,
+        userId: user.id,
         amount: Number(amount),
       });
       alert("Transaction submitted!");
